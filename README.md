@@ -30,5 +30,5 @@ Note that since the agent hasn't learnt the language model itself, a shorter pat
 Another flowchart is,
 ![flow2](flow2.png)
 
-A text form of these visualizations can be obtained with [visualization.py](visualization.py)
+A text form of these visualizations can be obtained with ```visualize_path``` function in [agent_tabular_ql.py](agent_tabular_ql.py)
 Note that the functions ```tabular_q_learning``` and ```epsilon_greedy``` in [agent_tabular_ql.py](agent_tabular_ql.py) are missing due to privacy constraints of the competition and will be uploaded as soon as the competition is over.

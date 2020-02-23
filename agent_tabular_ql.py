@@ -173,6 +173,15 @@ def run():
 
 # In[]:
 
+def visualize_path():
+    _, history = run_episode(for_training=False, need_history=True)
+    print('Quest : ', history[0][1])
+    for el in history:
+        print('Current : {}, action taken : {} {}, next : {}, reward : {}, done : {}'.format(
+            el[0], framework.actions[el[2]], framework.objects[el[3]], el[4], el[6], el[7]))
+
+# In[]:
+
 if __name__ == '__main__':
     # Data loading and build the dictionaries that use unique index for each state
     (dict_room_desc, dict_quest_desc) = framework.make_all_states_index()
@@ -198,3 +207,4 @@ if __name__ == '__main__':
     axis.set_title(('Tablular: nRuns=%d, Epilon=%.2f, Epi=%d, alpha=%.4f' %
                     (NUM_RUNS, TRAINING_EP, NUM_EPIS_TRAIN, ALPHA)))
     plt.show()
+    visualize_path()
